@@ -1,0 +1,11 @@
+<view class="page">
+    <view class="width100 padding20 borderBottom column" data-item="{{item}}" wx:for="{{readHistory}}" bindtap="goChapterInfo">
+        <view class="spacebetween alignEnd">
+            <view class="column">
+                <view class="fontBold">{{item.bookName}}</view>
+                <view class="marginTop10">{{item.title}}</view>
+            </view>
+            <view class="btn2" data-index="{{index}}" catchtap="deleteHistory">删除</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,37 @@
+.categoryList {
+    width:30%;
+    height: 100vh;
+    background-color: #f6f6f6;
+}
+.categoryItem {
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categoryItemAct {
+    background-color: #fff;
+}
+.categoryItemAct:after {
+    content: '';
+    display: block;
+    height: 90rpx;
+    width: 10rpx;
+    background: #0cd271;
+    position: absolute;
+    left: 0%;
+}
+.bookList {
+    width:70%;
+    height: 100vh;
+    background-color: #fafbfb;
+}
+.cover {
+    width: 130rpx;
+    height: 170rpx;
+    border-radius: 5px;
+}
+.box1 {
+    padding: 20rpx 30rpx;
+}

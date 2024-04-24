@@ -1,0 +1,10 @@
+.btn2 {
+    width: 150rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:repeating-linear-gradient(to right, #fb5e5e,#fe354e);
+    color: #fff;
+    border-radius: 5px;
+}

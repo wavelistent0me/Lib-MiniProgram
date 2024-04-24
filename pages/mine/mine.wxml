@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="marginTop20 boxItem alignCenter padding30">
+        <image src="/images/avatar.png" class="avatar"></image>
+        <view class=" marginLeft30">{{user.username}}</view>
+    </view>
+    <view class="marginTop20 boxItem column itemContainer">
+        <view class="itemWrapper" bindtap="jumpPage" data-page='bookManager' wx:if="{{user.type==0}}">
+            <image src="/images/bookManager.png" class="leftImg"></image>
+            <view class="leftText">管理书籍</view>
+        </view>
+        <view class="itemWrapper" bindtap="jumpPage" data-page='userManager' wx:if="{{user.type==0}}">
+            <image src="/images/userManager.png" class="leftImg"></image>
+            <view class="leftText">用户管理</view>
+        </view>
+        <view class="itemWrapper" bindtap="jumpPage" data-page='favorite'>
+            <image src="/images/favorite1.png" class="leftImg"></image>
+            <view class="leftText">我的收藏</view>
+        </view>
+        <view class="itemWrapper" bindtap="jumpPage" data-page='orderList'>
+            <image src="/images/note.png" class="leftImg"></image>
+            <view class="leftText">购买记录</view>
+        </view>
+        <view class="itemWrapper" bindtap="jumpPage" data-page='readHistory'>
+            <image src="/images/history.png" class="leftImg"></image>
+            <view class="leftText">阅读记录</view>
+        </view>
+        <view class="itemWrapper" bindtap="jumpPage" data-page='noteManager'>
+            <image src="/images/note.png" class="leftImg"></image>
+            <view class="leftText">读书笔记</view>
+        </view>
+    </view>
+</view>

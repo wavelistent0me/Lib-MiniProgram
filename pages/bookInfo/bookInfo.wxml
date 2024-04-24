@@ -1,0 +1,58 @@
+<view class="page">
+    <view class="box1">
+        <image src="{{info.avatar}}" class="bg" mode="aspectFill"></image>
+        <view class="box2">
+            <image src="{{info.avatar}}" class="cover" mode="aspectFill"></image>
+            <view class="column marginLeft40">
+                <view class="colorWhite fontSize32 fontBold marginTop30">{{info.name}}</view>
+                <view class="colorWhite marginTop20">{{info.author}}</view>
+                <image src="/images/favorite1.png" bindtap="setFavorite" class="favoriteIcon marginTop20" wx:if="{{isFavorite==1}}"></image>
+                <image src="/images/favorite2.png" bindtap="setFavorite" class="favoriteIcon marginTop20" wx:if="{{isFavorite==0}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="box3" wx:if="{{ind==0}}">
+        <view class="box4">
+            <view class="column justifyCenter" data-ind="0" bindtap="clickTab">
+                <view class="{{ind==0?'tabItem':'tabItem2'}}">目录</view>
+                <view class="{{ind==0?'line':'line2'}}"></view>
+            </view>
+            <view class="column justifyCenter marginLeft100" data-ind="1" bindtap="clickTab">
+                <view class="{{ind==1?'tabItem':'tabItem2'}}">评论</view>
+                <view class="{{ind==1?'line':'line2'}}"></view>
+            </view>
+        </view>
+        <view style="width:100%;height:20rpx"></view>
+        <view class="paddingY20 borderBottom alignCenter" data-item="{{item}}" wx:for="{{chapterList}}"
+              bindtap="goChapterInfo">
+            <image src="/images/unlock.png" class="unlockIcon" wx:if="{{item.price==0||item.isPurchase==1}}"></image>
+            <image src="/images/lock.png" class="lockIcon" wx:else></image>
+            <view class="marginLeft20">{{item.title}}</view>
+        </view>
+    </view>
+    <view class="box6" wx:if="{{ind==1}}">
+        <view class="box4">
+            <view class="column justifyCenter" data-ind="0" bindtap="clickTab">
+                <view class="{{ind==0?'tabItem':'tabItem2'}}">目录</view>
+                <view class="{{ind==0?'line':'line2'}}"></view>
+            </view>
+            <view class="column justifyCenter marginLeft100" data-ind="1" bindtap="clickTab">
+                <view class="{{ind==1?'tabItem':'tabItem2'}}">评论</view>
+                <view class="{{ind==1?'line':'line2'}}"></view>
+            </view>
+        </view>
+        <view class="width100 padding20 borderBottom column" data-item="{{item}}" wx:for="{{commentList}}" bindtap="">
+            <view class="spacebetween alignEnd">
+                <view class="column">
+                    <view class="fontBold">{{item.userName}}</view>
+                    <view class="marginTop10">{{item.content}}</view>
+                </view>
+                <view class="btn2" wx:if="{{item.userId==userId||userType==0}}" data-item="{{item}}" bindtap="deleteComment">删除</view>
+            </view>
+        </view>
+        <view class="column box5 width100 marginTop40">
+            <textarea class="width100" model:value="{{content}}" placeholder="留下你的评论吧"></textarea>
+        </view>
+        <view class="btn" bindtap="addComment">添加评论</view>
+    </view>
+</view>

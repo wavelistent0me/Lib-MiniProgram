@@ -1,0 +1,9 @@
+<view class="page">
+    <view class="title width100 padding20">{{info.title}}</view>
+    <view class="content width100" wx:for="{{info.content}}">{{item}}</view>
+
+    <!--<view class="column box1 width100 marginTop40">
+        <textarea class="width100" model:value="{{content}}" placeholder="读书笔记"></textarea>
+    </view>
+    <view class="btn" bindtap="addNote">添加笔记</view>-->
+</view>

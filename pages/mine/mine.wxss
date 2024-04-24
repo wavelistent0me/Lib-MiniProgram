@@ -1,0 +1,32 @@
+.page {
+    background-color: #f2f2f2;
+}
+.itemWrapper{
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+
+}
+.leftImg{
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 20rpx;
+}
+.leftText{
+    color: #333333;
+    margin-left: 20rpx;
+    font-size: 32rpx;
+}
+.boxItem {
+    width: 710rpx;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.itemContainer .itemWrapper:nth-child(n):not(:last-child){
+    border-bottom: 1px solid #e6e6e6;
+}
+.avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}

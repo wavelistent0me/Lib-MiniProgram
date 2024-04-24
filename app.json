@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/login/login",
+
+    "pages/index/index",
+    "pages/rank/rank",
+    "pages/recommend/recommend",
+    "pages/mine/mine",
+    "pages/bookManager/bookManager",
+    "pages/bookEdit/bookEdit",
+    "pages/bookInfo/bookInfo",
+    "pages/chapterManager/chapterManager",
+    "pages/chapterEdit/chapterEdit",
+    "pages/chapterInfo/chapterInfo",
+    "pages/readHistory/readHistory",
+    "pages/noteManager/noteManager",
+    "pages/orderList/orderList",
+    "pages/userManager/userManager",
+    "pages/category/category",
+    "pages/favorite/favorite",
+
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0cd271",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#0cd271",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index2.png",
+        "selectedIconPath": "/images/index1.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行榜",
+        "iconPath": "/images/rank2.png",
+        "selectedIconPath": "/images/rank1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "书库",
+        "iconPath": "/images/category2.png",
+        "selectedIconPath": "/images/category1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/mine2.png",
+        "selectedIconPath": "/images/mine1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json"
+}

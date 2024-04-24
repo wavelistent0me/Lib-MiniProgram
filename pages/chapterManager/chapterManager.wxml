@@ -1,0 +1,16 @@
+<view class="page">
+    <view class="box1 width690 marginTop20 borderRadius10">
+        <view class="spacebetween box2" wx:for="{{list}}">
+            <view class="alignCenter">
+                <view class="column marginLeft20">
+                    <view class="fontBold fontSize32">{{item.title}}</view>
+                </view>
+            </view>
+            <view class="alignCenter">
+                <view class="btn2" data-item="{{item}}" bindtap="goEdit">编辑</view>
+                <view class="btn2 marginLeft20" data-item="{{item}}" bindtap="deleteChapter">删除</view>
+            </view>
+        </view>
+    </view>
+    <view class="btn" bindtap="goChapterEdit">添加章节</view>
+</view>

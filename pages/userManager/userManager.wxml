@@ -1,0 +1,7 @@
+<view class="page">
+    <view class="backgroundWhite width100 box1 spacebetween borderBottom">
+        <view>用户数：{{userNum}}</view>
+        <view>消费总数：{{costNum}}</view>
+    </view>
+    <view class="width100 backgroundWhite box2 borderBottom" wx:for="{{userList}}">{{item.username}}</view>
+</view>

@@ -1,0 +1,23 @@
+.nickname-wrapper {
+    display: flex;
+    width: 80%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+    color: black;
+}
+.borderTop {
+    border-top: .5px solid rgba(0, 0, 0, 0.1);
+}
+.nickname-label {
+    width: 105px;
+}
+.nickname-input {
+    flex: 1;
+}
+.avatar {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+}

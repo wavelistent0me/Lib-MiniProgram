@@ -1,0 +1,12 @@
+<view class="page">
+    <view class="width100 padding20 borderBottom column" data-item="{{item}}" wx:for="{{list}}" bindtap="">
+        <view class="spacebetween alignCenter">
+            <view class="column">
+                <view class="fontBold">{{item.bookName}}</view>
+                <view class="marginTop10">{{item.chapterName}}</view>
+                <view class="marginTop10 colorGray">{{item.createTime}}</view>
+            </view>
+            <view class="colorRed">￥ {{item.price}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="page">
+    <view class="column box1 width100">
+        <view>章节名</view>
+        <input class="marginTop20" model:value="{{title}}" placeholder="请输入章节名"></input>
+    </view>
+    <view class="column box1 width100">
+        <view>内容</view>
+        <textarea class="marginTop20 width100" model:value="{{content}}"
+                  placeholder="请输入内容" maxlength="1000"></textarea>
+    </view>
+    <view class="column box1 width100">
+        <view>价格</view>
+        <input class="marginTop20" type="number" model:value="{{price}}" placeholder="请输入价格"></input>
+    </view>
+
+    <view class="btn" bindtap="addChapter">提交</view>
+</view>

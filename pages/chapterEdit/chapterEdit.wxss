@@ -1,0 +1,37 @@
+.box1 {
+    padding: 40rpx;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+}
+.borderTop {
+    border-top: .5px solid rgba(0, 0, 0, 0.1);
+}
+.btn {
+    width: 690rpx;
+    height: 80rpx;
+    background-color: #ee5c5c;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40rpx;
+    border-radius: 10px;
+}
+.upload {
+    width: 250rpx;
+    height: 250rpx;
+}
+.cover {
+    width: 260rpx;
+    height: 340rpx;
+}
+.btn2 {
+    width: 690rpx;
+    height: 80rpx;
+    background-color: #1db0cc;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}

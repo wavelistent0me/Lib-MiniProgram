@@ -1,0 +1,25 @@
+.title {
+    padding: 20rpx 50rpx;
+    font-size: 18px;
+    font-weight: bold;
+}
+.content {
+    padding: 20rpx 100rpx;
+}
+.btn {
+    width: 690rpx;
+    height: 80rpx;
+    background-color: #ee5c5c;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 40rpx;
+}
+.box1 {
+    width: 690rpx;
+    height: 300rpx;
+    padding: 20rpx 40rpx;
+    border: .5px solid rgba(0, 0, 0, 0.1);
+}
