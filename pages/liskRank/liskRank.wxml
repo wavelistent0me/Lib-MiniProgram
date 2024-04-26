@@ -1,4 +1,8 @@
 <view class="page">
+    <view class="width690 flex marginTop20 box2">
+        <view class="{{ind==0?'tabItem':'tabItem2'}}" data-ind="0" bindtap="clickTab">官方推荐</view>
+        <view class="{{ind==1?'tabItem':'tabItem2'}}" data-ind="1" bindtap="clickTab">粉丝推荐</view>
+    </view>
     <view class="box1 width690 marginTop20 borderRadius10">
         <view class="alignCenter marginTop40" wx:for="{{list}}" wx:if="{{ind==0}}" data-item="{{item}}" bindtap="goBookInfo">
             <image src="{{item.avatar}}" class="cover"></image>
@@ -13,7 +17,10 @@
             <view class="column marginLeft20">
                 <view class="fontBold fontSize32">{{item.name}}</view>
                 <view class="colorGray2 fontSize28 marginTop10">{{item.author}}</view>
-                <view class="colorGray2 fontSize28 marginTop10">浏览量：{{item.view}}</view>
+                <view class="alignCenter marginTop20">
+                    <image src="/images/like.png" class="favoriteIcon"></image>
+                    <view class="marginLeft10">1</view>
+                </view>
             </view>
         </view>
     </view>

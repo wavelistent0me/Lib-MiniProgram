@@ -3,11 +3,18 @@
         <image src="{{info.avatar}}" class="bg" mode="aspectFill"></image>
         <view class="box2">
             <image src="{{info.avatar}}" class="cover" mode="aspectFill"></image>
-            <view class="column marginLeft40">
-                <view class="colorWhite fontSize32 fontBold marginTop30">{{info.name}}</view>
+            <view class="column marginLeft40 width100">
+                <view class="spacebetween alignCenter width100">
+                    <view class="colorWhite fontSize32 fontBold marginTop30">{{info.name}}</view>
+                    <image src="/images/favorite1.png" bindtap="setFavorite" class="favoriteIcon marginTop20" wx:if="{{isFavorite==1}}"></image>
+                    <image src="/images/favorite2.png" bindtap="setFavorite" class="favoriteIcon marginTop20" wx:if="{{isFavorite==0}}"></image>
+                </view>
                 <view class="colorWhite marginTop20">{{info.author}}</view>
-                <image src="/images/favorite1.png" bindtap="setFavorite" class="favoriteIcon marginTop20" wx:if="{{isFavorite==1}}"></image>
-                <image src="/images/favorite2.png" bindtap="setFavorite" class="favoriteIcon marginTop20" wx:if="{{isFavorite==0}}"></image>
+                <view class="alignCenter marginTop20">
+                    <image src="/images/like.png" bindtap="setFavorite" class="favoriteIcon" wx:if="{{isFavorite==1}}"></image>
+                    <image src="/images/noLike.png" bindtap="setFavorite" class="favoriteIcon" wx:if="{{isFavorite==0}}"></image>
+                    <view class="colorWhite marginLeft20">1</view>
+                </view>
             </view>
         </view>
     </view>
@@ -25,8 +32,10 @@
         <view style="width:100%;height:20rpx"></view>
         <view class="paddingY20 borderBottom alignCenter" data-item="{{item}}" wx:for="{{chapterList}}"
               bindtap="goChapterInfo">
+<!--
             <image src="/images/unlock.png" class="unlockIcon" wx:if="{{item.price==0||item.isPurchase==1}}"></image>
             <image src="/images/lock.png" class="lockIcon" wx:else></image>
+-->
             <view class="marginLeft20">{{item.title}}</view>
         </view>
     </view>
@@ -42,12 +51,16 @@
             </view>
         </view>
         <view class="width100 padding20 borderBottom column" data-item="{{item}}" wx:for="{{commentList}}" bindtap="">
-            <view class="spacebetween alignEnd">
-                <view class="column">
+            <view class="column">
+                <view class="spacebetween alignCenter">
                     <view class="fontBold">{{item.userName}}</view>
-                    <view class="marginTop10">{{item.content}}</view>
+                    <view class="fontSize24">2024-4-24 10:23</view>
                 </view>
-                <view class="btn2" wx:if="{{item.userId==userId||userType==0}}" data-item="{{item}}" bindtap="deleteComment">删除</view>
+                <view class="spacebetween alignCenter">
+                    <view class="">{{item.content}}</view>
+                    <view class="btn2" wx:if="{{item.userId==userId||userType==0}}" data-item="{{item}}"
+                          bindtap="deleteComment">删除</view>
+                </view>
             </view>
         </view>
         <view class="column box5 width100 marginTop40">

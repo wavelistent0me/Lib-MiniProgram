@@ -142,6 +142,30 @@
                     "pathName": "pages/favorite/favorite",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/bookInfo/bookInfo",
+                    "pathName": "pages/bookInfo/bookInfo",
+                    "query": "id=1752959989644042241",
+                    "scene": null
+                },
+                {
+                    "name": "pages/liskRank/liskRank",
+                    "pathName": "pages/liskRank/liskRank",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/chapterEdit/chapterEdit",
+                    "pathName": "pages/chapterEdit/chapterEdit",
+                    "query": "id=1752962117880029185",
+                    "scene": null
+                },
+                {
+                    "name": "pages/bookInfo/bookInfo",
+                    "pathName": "pages/bookInfo/bookInfo",
+                    "query": "id=1752959989644042241",
+                    "scene": null
                 }
             ]
         }

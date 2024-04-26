@@ -8,10 +8,14 @@
         <textarea class="marginTop20 width100" model:value="{{content}}"
                   placeholder="请输入内容" maxlength="1000"></textarea>
     </view>
-    <view class="column box1 width100">
+    <view class="btn" bindtap="addChapter">提交</view>
+    <view class="column box1 width100" wx:if="{{id!=''}}">
+        <view class="btn2" bindtap="">文本上传</view>
+    </view>
+<!--    <view class="column box1 width100">
         <view>价格</view>
         <input class="marginTop20" type="number" model:value="{{price}}" placeholder="请输入价格"></input>
-    </view>
+    </view>-->
 
     <view class="btn" bindtap="addChapter">提交</view>
 </view>

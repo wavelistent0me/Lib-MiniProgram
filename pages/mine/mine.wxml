@@ -16,10 +16,14 @@
             <image src="/images/favorite1.png" class="leftImg"></image>
             <view class="leftText">我的收藏</view>
         </view>
-        <view class="itemWrapper" bindtap="jumpPage" data-page='orderList'>
+        <view class="itemWrapper" bindtap="jumpPage" data-page='favorite'>
+            <image src="/images/like.png" class="leftImg"></image>
+            <view class="leftText">点赞列表</view>
+        </view>
+        <!--<view class="itemWrapper" bindtap="jumpPage" data-page='orderList'>
             <image src="/images/note.png" class="leftImg"></image>
             <view class="leftText">购买记录</view>
-        </view>
+        </view>-->
         <view class="itemWrapper" bindtap="jumpPage" data-page='readHistory'>
             <image src="/images/history.png" class="leftImg"></image>
             <view class="leftText">阅读记录</view>

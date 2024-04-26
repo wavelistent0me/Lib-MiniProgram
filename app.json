@@ -18,6 +18,7 @@
     "pages/userManager/userManager",
     "pages/category/category",
     "pages/favorite/favorite",
+    "pages/liskRank/liskRank",
 
     "pages/logs/logs"
   ],
@@ -44,8 +45,8 @@
         "selectedIconPath": "/images/rank1.png"
       },
       {
-        "pagePath": "pages/category/category",
-        "text": "书库",
+        "pagePath": "pages/liskRank/liskRank",
+        "text": "点赞排行",
         "iconPath": "/images/category2.png",
         "selectedIconPath": "/images/category1.png"
       },

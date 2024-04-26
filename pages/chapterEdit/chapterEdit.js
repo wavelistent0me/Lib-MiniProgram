@@ -7,7 +7,7 @@ Page({
         id: "",
         title: '',
         content: '',
-        price: '',
+        price: 0,
         bookId: '',
     },
     addChapter() {
