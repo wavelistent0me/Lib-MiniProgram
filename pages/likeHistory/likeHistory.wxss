@@ -1,0 +1,8 @@
+.cover {
+    width: 130rpx;
+    height: 170rpx;
+    border-radius: 5px;
+}
+.box1 {
+    padding: 20rpx 30rpx;
+}

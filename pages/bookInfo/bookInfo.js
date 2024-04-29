@@ -1,3 +1,5 @@
+const util = require("../../utils/util");
+
 Page({
 
     /**
@@ -14,6 +16,7 @@ Page({
         userId: '',
         userType: '',
         isFavorite: '',
+        isLike: '',
     },
     getBookInfo(id) {
         var that = this;
@@ -29,6 +32,7 @@ Page({
                         info: res.data.data.info,
                     })
                     that.isFavorite();
+                    that.isLike();
                 }
                 else {
                     wx.showToast({icon: "none", title: res.data.msg});
@@ -127,6 +131,14 @@ Page({
             },
             success(res) {
                 if (res.data.code == 200) {
+
+                    for (let i = 0; i < res.data.data.list.length; i++) {
+                        console.log(res.data.data.list[i]);
+                        if (res.data.data.list[i].createTime) {
+                            res.data.data.list[i].createTime = util.formatTime(res.data.data.list[i].createTime);
+                        }
+                    }
+
                     that.setData({
                         commentList: res.data.data.list.reverse(),
                     })
@@ -190,6 +202,58 @@ Page({
                 if (res.data.code == 200) {
                     that.setData({
                         isFavorite: res.data.data.isFavorite
+                    })
+                }
+                else {
+                    wx.showToast({icon: "none", title: res.data.msg});
+                }
+            }
+        });
+    },
+    setLike() {
+        var that = this;
+        wx.request({
+            url: 'http://localhost:8080/libserver/like/setLike',
+            method: 'POST',
+            data: {
+                bookId: that.data.bookId,
+                userId: wx.getStorageSync('id'),
+            },
+            success(res) {
+                if (res.data.code == 200) {
+                    var info = that.data.info;
+
+                    if (res.data.data.isLike == 1) {
+                        info.likeNum += 1;
+                    }
+                    else {
+                        info.likeNum -= 1;
+                    }
+
+                    that.setData({
+                        isLike: res.data.data.isLike,
+                        info: info,
+                    });
+                }
+                else {
+                    wx.showToast({icon: "none", title: res.data.msg});
+                }
+            }
+        });
+    },
+    isLike() {
+        var that = this;
+        wx.request({
+            url: 'http://localhost:8080/libserver/like/isLike',
+            method: 'POST',
+            data: {
+                bookId: that.data.bookId,
+                userId: wx.getStorageSync('id'),
+            },
+            success(res) {
+                if (res.data.code == 200) {
+                    that.setData({
+                        isLike: res.data.data.isLike
                     })
                 }
                 else {

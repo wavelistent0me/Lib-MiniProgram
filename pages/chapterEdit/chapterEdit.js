@@ -77,6 +77,27 @@ Page({
             }
         });
     },
+    textUpload() {
+        var that = this;
+        wx.chooseImage({
+            success(res) {
+                const tempFilePaths = res.tempFilePaths
+                wx.uploadFile({
+                    url: 'http://localhost:8080/libserver/textUpload', //仅为示例，非真实的接口地址
+                    filePath: tempFilePaths[0],
+                    name: 'file',
+                    formData: {},
+                    success(rez) {
+                        console.log(rez);
+                        rez.data = JSON.parse(rez.data);
+                        that.setData({
+                            content: rez.data.data.content,
+                        })
+                    }
+                })
+            }
+        })
+    },
 
     /**
      * 生命周期函数--监听页面加载

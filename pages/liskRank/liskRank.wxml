@@ -4,7 +4,7 @@
         <view class="{{ind==1?'tabItem':'tabItem2'}}" data-ind="1" bindtap="clickTab">粉丝推荐</view>
     </view>
     <view class="box1 width690 marginTop20 borderRadius10">
-        <view class="alignCenter marginTop40" wx:for="{{list}}" wx:if="{{ind==0}}" data-item="{{item}}" bindtap="goBookInfo">
+        <view class="alignCenter marginTop40" wx:for="{{rlist}}" wx:if="{{ind==0}}" data-item="{{item}}" bindtap="goBookInfo">
             <image src="{{item.avatar}}" class="cover"></image>
             <view class="column marginLeft20">
                 <view class="fontBold fontSize32">{{item.name}}</view>
@@ -12,14 +12,14 @@
                 <view class="colorGray2 fontSize28 marginTop10">浏览量：{{item.view}}</view>
             </view>
         </view>
-        <view class="alignCenter marginTop40" wx:for="{{rlist}}" wx:if="{{ind==1}}" data-item="{{item}}" bindtap="goBookInfo">
+        <view class="alignCenter marginTop40" wx:for="{{list}}" wx:if="{{ind==1}}" data-item="{{item}}" bindtap="goBookInfo">
             <image src="{{item.avatar}}" class="cover"></image>
             <view class="column marginLeft20">
                 <view class="fontBold fontSize32">{{item.name}}</view>
                 <view class="colorGray2 fontSize28 marginTop10">{{item.author}}</view>
                 <view class="alignCenter marginTop20">
                     <image src="/images/like.png" class="favoriteIcon"></image>
-                    <view class="marginLeft10">1</view>
+                    <view class="marginLeft10">{{item.likeNum}}</view>
                 </view>
             </view>
         </view>

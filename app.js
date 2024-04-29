@@ -12,8 +12,11 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    this.globalData.baseUrl = 'http://localhost:8080/';
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    baseUrl: '',
   }
 })

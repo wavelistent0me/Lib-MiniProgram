@@ -11,9 +11,9 @@
                 </view>
                 <view class="colorWhite marginTop20">{{info.author}}</view>
                 <view class="alignCenter marginTop20">
-                    <image src="/images/like.png" bindtap="setFavorite" class="favoriteIcon" wx:if="{{isFavorite==1}}"></image>
-                    <image src="/images/noLike.png" bindtap="setFavorite" class="favoriteIcon" wx:if="{{isFavorite==0}}"></image>
-                    <view class="colorWhite marginLeft20">1</view>
+                    <image src="/images/like.png" bindtap="setLike" class="favoriteIcon" wx:if="{{isLike==1}}"></image>
+                    <image src="/images/noLike.png" bindtap="setLike" class="favoriteIcon" wx:if="{{isLike==0}}"></image>
+                    <view class="colorWhite marginLeft20">{{info.likeNum}}</view>
                 </view>
             </view>
         </view>
@@ -54,7 +54,7 @@
             <view class="column">
                 <view class="spacebetween alignCenter">
                     <view class="fontBold">{{item.userName}}</view>
-                    <view class="fontSize24">2024-4-24 10:23</view>
+                    <view class="fontSize24">{{item.createTime}}</view>
                 </view>
                 <view class="spacebetween alignCenter">
                     <view class="">{{item.content}}</view>

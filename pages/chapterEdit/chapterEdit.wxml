@@ -10,7 +10,7 @@
     </view>
     <view class="btn" bindtap="addChapter">提交</view>
     <view class="column box1 width100" wx:if="{{id!=''}}">
-        <view class="btn2" bindtap="">文本上传</view>
+        <view class="btn2" bindtap="textUpload">文本上传</view>
     </view>
 <!--    <view class="column box1 width100">
         <view>价格</view>
